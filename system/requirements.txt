@@ -2,6 +2,5 @@ jupyter
 notebook
 jupyterlab
 metakernel
-rootkernel
 notedown
 jupytext

@@ -1,5 +1,5 @@
 #Official ROOT Docker image
-FROM rootproject/root-ubuntu16
+FROM rootproject/root-ubuntu16:latest
 
 # Run the following commands as super user (root):
 USER root
@@ -7,9 +7,9 @@ RUN  apt-get update &&  apt-get install -y python-pip vim wget && rm -rf /var/li
 
 #Instal LHAPDF
 WORKDIR /
-COPY installLHA.sh .
-RUN ./installLHA.sh
-ENV PATH="/lhapdf/install/bin/:${PATH}"
+#COPY installLHA.sh .
+#RUN ./installLHA.sh
+#ENV PATH="/lhapdf/install/bin/:${PATH}"
 
 #Instal QCDNUM
 COPY installQCDnum.sh .
